@@ -3,20 +3,20 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    l = len(arr)
+    l = len(arr)                            # create var, we'll be using this a lot
     
-    before = [1] * l
+    before = [1] * l                        # create temp arrays, starting with 1
     after = [1] * l
     product = [0] * l
 
-    for i in range(1, l):
-        before[i] = before[i-1] * arr[i-1]
+    for i in range(1, l):                   # create array of values before the selected element
+        before[i] = before[i-1] * arr[i-1]  # multiply equal elements of before and arr
 
-    for i in range(l - 2, -1, -1):
-        after[i] = after[i+1] * arr[i+1]
+    for i in range(l - 2, -1, -1):          # create array of values after the selected element
+        after[i] = after[i+1] * arr[i+1]    # multiply equal elements of after and arr
 
-    for i in range(0, l):
-        product[i] = before[i] * after[i]
+    for i in range(0, l):                   # create product array
+        product[i] = before[i] * after[i]   # multiply equal elements of before and after
 
     return product
 
