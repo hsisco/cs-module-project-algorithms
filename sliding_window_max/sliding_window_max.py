@@ -13,4 +13,4 @@ if __name__ == '__main__':
     arr = [1, 3, -1, -3, 5, 3, 6, 7]
     k = 3
 
-    print(f"Output of sliding_window_max function is: {sliding_window_max(arr, k)}")
+    print(f"\nOutput of sliding_window_max function is: {sliding_window_max(arr, k)}")
